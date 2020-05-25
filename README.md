@@ -1,3 +1,6 @@
+## Covid-19 watcher 
+A project with React to track the developments of Covid-19
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
