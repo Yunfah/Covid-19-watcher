@@ -1,0 +1,20 @@
+.white-h{
+  color: #fff;
+}
+
+.TotalWorldwide, .HighlightCountry, .FavList, .SearchCountries{
+  padding: 0 0 50px 0;
+}
+
+.CountryStat{
+  padding: 0 0 15px 0;
+}
+
+.card-text-h{
+  background: none;
+  border: none;
+}
+
+.card-text-h .card-body{
+  padding: 20px 0 0 0;
+}

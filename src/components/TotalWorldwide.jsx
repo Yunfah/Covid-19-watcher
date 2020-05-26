@@ -1,28 +1,46 @@
 import React from 'react';
 import './styles.css';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function TotalWorldwide() {
 
   return (
-<div className="TotalWorldwide">
 
-<Card>
-    <Card.Body>
-      <Card.Title>Total status worldwide</Card.Title>
-      <Card.Text>
-      <div>LÄGG IN DATA HÄR</div>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
+    <div className="TotalWorldwide">
+      <h3 className="white-h">Worldwide</h3>
+        <Card>
+          <Card.Body>
+            <h2>123456789</h2>
+            <Card.Text>
+              TOTAL CASES
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <Row>
+              <Col>
+                <h5>1234567</h5>
+<p>Recovered</p>
+              </Col>
+              <Col>
+                <h5>1234567</h5>
+          <p>Active cases</p>
+              </Col>
+              <Col>
+<h5>1234567</h5>
+          <p>Deaths</p>
 
-</div>
-);
+              </Col>
+
+
+        </Row>
+          </Card.Footer>
+        </Card>
+
+
+    </div>
+    );
 }
 
 export default TotalWorldwide;

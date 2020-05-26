@@ -1,21 +1,40 @@
 import React from 'react';
 import './styles.css';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function HighlightCountry() {
 
   return (
 <div className="HighlightCountry">
 
-<Card>
+  <Card>
     <Card.Body>
-      <Card.Title>Country</Card.Title>
+      <h5>COUNTRY</h5>
+      <h4>1234567891345</h4>
       <Card.Text>
-        Highlighted country
+        TOTAL CASES
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <Row>
+        <Col>
+          <h5>1234567</h5>
+  <p>Recovered</p>
+
+        </Col>
+        <Col>
+          <h5>1234567</h5>
+    <p>Active cases</p>
+        </Col>
+        <Col>
+<h5>1234567</h5>
+    <p>Deaths</p>
+        </Col>
+
+
+  </Row>
     </Card.Footer>
   </Card>
 
