@@ -61,7 +61,6 @@ class api extends Component {
       return <p>Pick a country</p>
     }
 
-
     render() {
 
         var { isLoaded, items} = this.state;
@@ -72,17 +71,13 @@ class api extends Component {
         else {
             return (
                 <div>
-
+                  <h3> World Total Cases: {items.data.summary.total_cases}, World Active Cases: {items.data.summary.active_cases}, World Deaths: {items.data.summary.deaths}, World Recovered: {items.data.summary.recovered} </h3>
+                  
                   <select onChange={this.onRegionChange.bind(this)}>
                     {this.renderRegions(items.data.regions)}
                   </select>
 
                   {this.renderRegion()}
-
-
-
-                  {/* Display Total Cases: {items.data.summary.total_cases} 
-                  Display Total Deaths: {items.data.summary.deaths}  */}
 
                 </div>
             );
