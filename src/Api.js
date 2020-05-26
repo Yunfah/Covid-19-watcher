@@ -56,9 +56,9 @@ class api extends Component {
       if(this.state.currentRegion !== '') {
         let region = this.state.currentRegion;
         let regions = this.state.items.data.regions;
-        return <p>Antal fall: {regions[region].total_cases}</p>
+        return <p>Country: {regions[region].name}, Total Cases: {regions[region].total_cases}, Active Cases: {regions[region].active_cases}, Deaths: {regions[region].deaths}, Recovered: {regions[region].recovered}  </p>
       }
-      return <p>Välj ett land</p>
+      return <p>Pick a country</p>
     }
 
 
