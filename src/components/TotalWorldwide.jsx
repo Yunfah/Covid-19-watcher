@@ -20,19 +20,17 @@ function TotalWorldwide() {
           <Card.Footer>
             <Row>
               <Col>
-                <h5>1234567</h5>
+                <h6>1234567</h6>
 <p>Recovered</p>
               </Col>
               <Col>
-                <h5>1234567</h5>
+                <h6>1234567</h6>
           <p>Active cases</p>
               </Col>
               <Col>
-<h5>1234567</h5>
+<h6>1234567</h6>
           <p>Deaths</p>
-
               </Col>
-
 
         </Row>
           </Card.Footer>

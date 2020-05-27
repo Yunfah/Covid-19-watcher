@@ -20,12 +20,7 @@ function App() {
         <Col lg={{span: 6, order: 1}} xs={{ span: 12, order: 2 }}>
           <RecentList />
         </Col>
-
-
-        <Col lg={{span: 2, order: 2}} xs={0}></Col>
-
-
-        <Col lg={{span: 4, order: 3}} xs={{ span: 12, order: 1 }}>
+        <Col lg={{span: 4, order: 3, offset: 2}} xs={{ span: 12, order: 1 }}>
           <TotalWorldwide/>
           <SearchCountries />
         </Col>
