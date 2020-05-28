@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import TotalWorldwide from './components/TotalWorldwide';
-import HighlightCountry from './components/HighlightCountry';
 import RecentList from './components/RecentList';
 import SearchCountries from './components/SearchCountries';
 import Container from 'react-bootstrap/Container';

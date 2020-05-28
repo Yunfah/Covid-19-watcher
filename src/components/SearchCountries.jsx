@@ -1,8 +1,5 @@
 import React from 'react';
 import './styles.css';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 
 function SearchCountries() {
@@ -10,8 +7,6 @@ function SearchCountries() {
   return (
 
     <div className="SearchCountries">
-
-
 <Form>
   <Form.Group controlId="rating">
           <h4 className="white-h">Search country</h4>
