@@ -19,7 +19,9 @@ class api extends Component {
               this.setState({
                 isLoaded: true,
                 items: json,
+                
               });
+              
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
@@ -71,19 +73,19 @@ class api extends Component {
         else {
             return (
                 <div>
-                  <h3> World Total Cases: {items.data.summary.total_cases}, World Active Cases: {items.data.summary.active_cases}, World Deaths: {items.data.summary.deaths}, World Recovered: {items.data.summary.recovered} </h3>
+                  {/* <h3> World Total Cases: {items.data.summary.total_cases}, World Active Cases: {items.data.summary.active_cases}, World Deaths: {items.data.summary.deaths}, World Recovered: {items.data.summary.recovered} </h3>
                   
                   <select onChange={this.onRegionChange.bind(this)}>
                     {this.renderRegions(items.data.regions)}
                   </select>
 
-                  {this.renderRegion()}
+                  {this.renderRegion()} */}
+
+                  {/* {this.props.toParent(items)} */}
 
                 </div>
             );
         }
-            
-
         
     }
 }

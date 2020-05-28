@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import TotalWorldwide from './components/TotalWorldwide';
 import RecentList from './components/RecentList';
@@ -8,7 +8,17 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Api from './components/Api';
 
-function App() {
+
+class App extends Component {
+  state = {
+    items: []
+  };
+
+  toParent = (api) => {
+    this.setState({items: api })
+  }
+
+ render() {
   return (
     <div className="App">
     <header className="App-header">
@@ -28,9 +38,13 @@ function App() {
 
       </Row>
 
-      <Api />
+      <Api toParent ={this.toParent}/>
     </Container>
   </div>);
+ }
+
 }
+
+
 
 export default App;
