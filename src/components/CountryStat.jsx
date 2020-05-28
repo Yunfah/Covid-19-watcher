@@ -1,29 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function CountryStat() {
+class CountryStat extends Component {
 
-  return (
-<div className="CountryStat">
-
-<Card>
-    <Card.Body>
-      <Row>
-
-      <Col><Card.Title >Country</Card.Title></Col>
-      <Col><h5>12345678</h5></Col>
-      <Col><h5>12345678</h5></Col>
-      <Col><h5>12345678</h5></Col>
-
-      </Row>
-    </Card.Body>
-  </Card>
-
-</div>
-);
+  render() {
+    return(
+      <div className = "CountryStat" >
+  
+        <Card>
+          <Card.Body>
+            <Row>
+  
+              <Col><Card.Title >Country</Card.Title></Col>
+              <Col><h5>12345678</h5></Col>
+              <Col><h5>12345678</h5></Col>
+              <Col><h5>12345678</h5></Col>
+  
+            </Row>
+          </Card.Body>
+        </Card>
+  
+      </div>
+    );
+  }
+  
 }
 
 export default CountryStat;

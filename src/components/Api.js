@@ -81,7 +81,7 @@ class api extends Component {
 
                   {this.renderRegion()} */}
 
-                  {this.props.toParent(items)}
+                  {/* {this.props.toParent(items)} */}
 
                 </div>
             );
