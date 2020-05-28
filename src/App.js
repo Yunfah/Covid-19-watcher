@@ -6,6 +6,7 @@ import SearchCountries from './components/SearchCountries';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Api from './components/Api';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
 
 
       </Row>
+
+      <Api />
     </Container>
   </div>);
 }
