@@ -22,7 +22,7 @@ class App extends Component {
   return (
     <div className="App">
     <header className="App-header">
-      <h1>Covid-19 watcher</h1>
+      <h1><span role="img" aria-label="microbe-emoji">&#129440;</span> COVID-19 WATCHER</h1>
     </header>
     <Container>
       <Row>

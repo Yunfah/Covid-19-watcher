@@ -65,16 +65,16 @@ class TotalWorldwide extends Component {
                       <Card.Footer>
                         <Row>
                           <Col>
-                            <h5 className="dataNum">{items.data.summary.active_cases}</h5>
+                            <span className="dataNum">{items.data.summary.active_cases}</span>
                       <p>Active cases</p>
 
                           </Col>
                           <Col>
-                            <h5 className="dataNum">{items.data.summary.recovered}</h5>
+                            <span className="dataNum">{items.data.summary.recovered}</span>
             <p>Recovered</p>
                           </Col>
                           <Col>
-            <h5 className="dataNum">{items.data.summary.deaths}</h5>
+            <span className="dataNum">{items.data.summary.deaths}</span>
                       <p>Deaths</p>
                           </Col>
                     </Row>
