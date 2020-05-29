@@ -14,9 +14,9 @@ function CountryStat() {
       <Row>
 
       <Col><Card.Title >Country</Card.Title></Col>
-      <Col><h5>12345678</h5></Col>
-      <Col><h5>12345678</h5></Col>
-      <Col><h5>12345678</h5></Col>
+      <Col><h5 className="dataNum">5950328</h5></Col>
+      <Col><h5 className="dataNum">5950328</h5></Col>
+      <Col><h5 className="dataNum">5950328</h5></Col>
 
       </Row>
     </Card.Body>

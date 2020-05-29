@@ -27,11 +27,11 @@ class App extends Component {
     <Container>
       <Row>
 
-        <Col lg={{span: 6, order: 1}} xs={{ span: 12, order: 2 }}>
+        <Col xl={{span: 6, order: 1}} xs={{ span: 12, order: 2 }}>
           <RecentList />
         </Col>
-        <Col lg={{span: 4, order: 3, offset: 2}} xs={{ span: 12, order: 1 }}>
-          <TotalWorldwide/>
+        <Col xl={{span: 4, order: 2, offset: 2}} xs={{ span: 12, order: 1 }}>
+          <TotalWorldwide />
           <SearchCountries />
         </Col>
 

@@ -9,7 +9,7 @@ function RecentList() {
 
   return (<div className="RecentList">
     <h3 className="white-h">Recently searched</h3>
-    <Card className="card-text-h">
+    <Card id="card-text-h">
     <Card.Body>
     <Row>
       <Col>
