@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CountUp from 'react-countup';
 import './styles.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -54,10 +55,11 @@ class TotalWorldwide extends Component {
             return (
               <div className="TotalWorldwide">
 
+
                   <h3 className="white-h">Worldwide</h3>
                     <Card>
                       <Card.Body>
-                        <h1>{items.data.summary.total_cases}</h1>
+                        <h1><CountUp duration={1} separator=" " end={items.data.summary.total_cases} /></h1>
                         <Card.Text>
                           TOTAL CASES
                         </Card.Text>
@@ -65,16 +67,16 @@ class TotalWorldwide extends Component {
                       <Card.Footer>
                         <Row>
                           <Col>
-                            <span className="dataNum">{items.data.summary.active_cases}</span>
+                            <span className="dataNum"><CountUp duration={1} separator=" " end={items.data.summary.active_cases} /></span>
                       <p>Active cases</p>
 
                           </Col>
                           <Col>
-                            <span className="dataNum">{items.data.summary.recovered}</span>
+                            <span className="dataNum"><CountUp duration={1} separator=" " end={items.data.summary.recovered} /></span>
             <p>Recovered</p>
                           </Col>
                           <Col>
-            <span className="dataNum">{items.data.summary.deaths}</span>
+            <span className="dataNum"><CountUp duration={1} separator=" " end={items.data.summary.deaths} /></span>
                       <p>Deaths</p>
                           </Col>
                     </Row>
