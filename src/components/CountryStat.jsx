@@ -6,27 +6,25 @@ import Row from 'react-bootstrap/Row';
 
 class CountryStat extends Component {
 
-  render() {
-    return(
-      <div className = "CountryStat" >
-  
-        <Card>
-          <Card.Body>
-            <Row>
-  
-              <Col><Card.Title >Country</Card.Title></Col>
-              <Col><h5>12345678</h5></Col>
-              <Col><h5>12345678</h5></Col>
-              <Col><h5>12345678</h5></Col>
-  
-            </Row>
-          </Card.Body>
-        </Card>
-  
-      </div>
-    );
-  }
-  
+  return (
+<div className="CountryStat">
+
+<Card>
+    <Card.Body>
+      <Row>
+
+      <Col><Card.Title >Country</Card.Title></Col>
+      <Col><span className="dataNum">5950328</span></Col>
+      <Col><span className="dataNum">5950328</span></Col>
+      <Col><span className="dataNum">5950328</span></Col>
+
+      </Row>
+    </Card.Body>
+  </Card>
+
+</div>
+);
+
 }
 
 export default CountryStat;
