@@ -1,5 +1,17 @@
+header h1{
+  font-size: 2.6em;
+  font-weight: bold;
+  margin: 10px;
+}
+
 .white-h{
   color: #fff;
+
+}
+
+.dataNum {
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .TotalWorldwide, .HighlightCountry, .FavList, .SearchCountries{
@@ -10,11 +22,11 @@
   padding: 0 0 15px 0;
 }
 
-.card-text-h{
+#card-text-h{
   background: none;
   border: none;
 }
 
-.card-text-h .card-body{
-  padding: 20px 0 0 0;
+#card-text-h .card-body{
+  padding-bottom: 0px;
 }
