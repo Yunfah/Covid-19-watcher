@@ -9,9 +9,17 @@ class RecentList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      country: [],
+      countries: [],
     }
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.toChild !== prevProps.toChild){
+        this.setState({countries: [...this.state.countries, this.props.toChild]})
+        console.log(this.props.toChild)
+    }
+   
+}
 
   render() {
     return (<div className="RecentList">
