@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+
 import CountUp from 'react-countup';
+
 import './styles.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -89,6 +91,7 @@ class TotalWorldwide extends Component {
         }
 
     }
+
 }
 
 

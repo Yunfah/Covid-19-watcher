@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function CountryStat() {
+class CountryStat extends Component {
 
   return (
 <div className="CountryStat">
@@ -24,6 +24,7 @@ function CountryStat() {
 
 </div>
 );
+
 }
 
 export default CountryStat;

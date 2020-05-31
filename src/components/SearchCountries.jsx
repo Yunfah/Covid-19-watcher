@@ -1,30 +1,85 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 import Form from 'react-bootstrap/Form';
 
-function SearchCountries() {
+class SearchCountries extends Component {
 
-  return (
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+      currentRegion: '',
+    }
+  }
 
-    <div className="SearchCountries">
-<Form>
-  <Form.Group controlId="rating">
-          <h4 className="white-h">Search country</h4>
-          <Form.Control as="select" required>
-            <option disabled value="default">Select country</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Form.Control>
-          <Form.Control.Feedback type="invalid">
-              Select
-            </Form.Control.Feedback>
-        </Form.Group>
-</Form>
-    </div>
-    );
+  componentDidMount() {
+    fetch("https://api.quarantine.country/api/v1/summary/latest")
+      .then(res => res.json())
+      .then(
+        json => {
+          this.setState({
+            isLoaded: true,
+            items: json,
+
+          });
+
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+
+  renderRegions(regions) {
+    return Object.keys(regions).map(region => {
+      let r = regions[region];
+      //console.log(r);
+      return (
+        <option key={region} value={region}>{r.name} </option>
+      )
+    })
+  }
+
+  onRegionChange(event) {
+    let region = event.target.value;
+    let regions = this.state.items.data.regions;
+
+    console.log(regions[region]);
+    this.props.countryFromChild(regions[region]);
+    this.setState({currentRegion: region});
+
+  }
+
+
+
+  render() {
+    var { isLoaded, items } = this.state;
+    if (!isLoaded) {
+       return <p> is loading ... </p>
+    } else {
+      return (
+        <div className="SearchCountries">
+          <Form>
+            <Form.Group controlId="rating">
+              <h4 className="white-h">Search country</h4>
+              <select onChange={this.onRegionChange.bind(this)}>
+                {this.renderRegions(items.data.regions)}
+              </select>
+  
+            </Form.Group>
+          </Form>
+        </div>
+      );
+    }
+  }
+
 }
 
 export default SearchCountries;
