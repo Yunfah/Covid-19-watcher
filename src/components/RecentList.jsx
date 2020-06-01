@@ -21,7 +21,6 @@ class RecentList extends Component {
   }
 
   showRecent(countries) {
-
     return Object.keys(countries).reverse().map(country => {
       let c = countries[country];
       return (
@@ -35,19 +34,17 @@ class RecentList extends Component {
   }
 
   triggerDelete(countries){
-
    if(window.confirm("Are you sure you want to clear list?")){
       this.setState({countries: [] })
+      localStorage.clear("SavedCountries");
    }
 }
 
-saveLocalstorage(countries){
+saveLocalstorage(){
 console.log("Save list");
-
 let arrayCountries = (this.state.countries)
-
 console.log(arrayCountries);
-  localStorage.setItem("countries", arrayCountries);
+  localStorage.setItem("SavedCountries", arrayCountries);
 }
 
 
