@@ -14,6 +14,13 @@ class RecentList extends Component {
     }
   }
 
+  componentDidMount(){
+    let getCountries = JSON.parse(localStorage.getItem("SavedCountries"));
+    this.setState({ countries: [] });
+    console.log(getCountries);
+  }
+
+
   componentDidUpdate(prevProps) {
     if (this.props.toChild !== prevProps.toChild) {
       this.setState({ countries: [...this.state.countries, this.props.toChild] })
@@ -42,13 +49,14 @@ class RecentList extends Component {
 
 saveLocalstorage(){
 console.log("Save list");
-let arrayCountries = (this.state.countries)
+var arrayCountries = JSON.stringify(this.state.countries)
 console.log(arrayCountries);
-  localStorage.setItem("SavedCountries", arrayCountries);
+localStorage.setItem("SavedCountries", arrayCountries);
+
 }
 
 
-  render() {
+  render(){
     return (<div className="RecentList">
       <h3 className="white-h">Recently searched</h3>
       <Card id="card-text-h">
