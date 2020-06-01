@@ -64,7 +64,7 @@ class RecentList extends Component {
       {this.showRecent(this.state.countries)}
 
 <div id="btnWrapper">
-  <Button id="clearBtn" variant="outline-light" className="del-wrap" onClick={(e)=>{
+  <Button id="clearBtn" variant="outline-light" onClick={(e)=>{
       this.triggerDelete();
    }}>
 Clear list

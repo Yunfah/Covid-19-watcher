@@ -30,11 +30,11 @@ class App extends Component {
     </header>
     <Container>
       <Row>
-        <Col lg={{span: 6, order: 1}} sm={{ span: 12, order: 2 }}>
+        <Col lg={{span: 6, order: 1}} xs={{ span: 12, order: 2 }}>
           <RecentList toChild = {this.state.country}/>
         </Col>
 
-        <Col lg={{span: 4, order: 2, offset: 2}} sm={{ span: 12, order: 1 }}>
+        <Col lg={{span: 4, order: 2, offset: 2}} xs={{ span: 12, order: 1 }}>
           <TotalWorldwide/>
           <SearchCountries countryFromChild={this.parentFunction} />
         </Col>
