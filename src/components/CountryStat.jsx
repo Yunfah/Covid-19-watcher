@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
+import CountUp from 'react-countup';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -13,12 +14,10 @@ class CountryStat extends Component {
         <Card>
           <Card.Body>
             <Row>
-
               <Col><Card.Title >{this.props.countryInfo.name}</Card.Title></Col>
-              <Col><span className="dataNum">{this.props.countryInfo.total_cases}</span></Col>
-              <Col><span className="dataNum">{this.props.countryInfo.active_cases}</span></Col>
-              <Col><span className="dataNum">{this.props.countryInfo.deaths}</span></Col>
-
+              <Col><h5><CountUp duration={0.0001} separator=" " end={this.props.countryInfo.total_cases} /></h5></Col>
+              <Col><h5><CountUp duration={0.0001} separator=" " end={this.props.countryInfo.active_cases}/></h5></Col>
+              <Col><h5><CountUp duration={0.0001} separator=" " end={this.props.countryInfo.deaths}/></h5></Col>
             </Row>
           </Card.Body>
         </Card>
@@ -28,4 +27,3 @@ class CountryStat extends Component {
   }
 }
 export default CountryStat;
-

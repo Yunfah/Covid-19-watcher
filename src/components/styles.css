@@ -9,6 +9,15 @@ header h1{
 
 }
 
+#clearBtn{
+  margin:auto;
+  display:block;
+}
+
+#btnWrapper{
+  padding-top: 40px;
+}
+
 .dataNum {
   font-size: 1em;
   font-weight: 500;
@@ -21,6 +30,11 @@ header h1{
 .CountryStat{
   padding: 0 0 15px 0;
 }
+
+.RecentList{
+  list-style: none;
+}
+
 
 #card-text-h{
   background: none;

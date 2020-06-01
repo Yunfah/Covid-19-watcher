@@ -4,6 +4,7 @@ import CountryStat from './CountryStat';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 class RecentList extends Component {
   constructor(props) {
@@ -57,7 +58,11 @@ class RecentList extends Component {
 
       {this.showRecent(this.state.countries)}
 
-    </div>);
+<div id="btnWrapper">
+ <Button id="clearBtn" variant="outline-light">Clear list</Button>
+</div>
+    </div>
+  );
 
   }
 
