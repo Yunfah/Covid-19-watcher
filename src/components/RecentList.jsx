@@ -34,6 +34,12 @@ class RecentList extends Component {
     })
   }
 
+  triggerDelete(countries){
+   if(window.confirm("Are you sure you want to clear list?")){
+      this.setState({countries: [] })
+   }
+}
+
   render() {
     return (<div className="RecentList">
       <h3 className="white-h">Recently searched</h3>
@@ -55,12 +61,16 @@ class RecentList extends Component {
           </Row>
         </Card.Body>
       </Card>
-
       {this.showRecent(this.state.countries)}
 
 <div id="btnWrapper">
- <Button id="clearBtn" variant="outline-light">Clear list</Button>
+  <Button id="clearBtn" variant="outline-light" className="del-wrap" onClick={(e)=>{
+      this.triggerDelete();
+   }}>
+Clear list
+</Button>
 </div>
+
     </div>
   );
 
