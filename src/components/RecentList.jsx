@@ -14,12 +14,24 @@ class RecentList extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.toChild !== prevProps.toChild){
-        this.setState({countries: [...this.state.countries, this.props.toChild]})
-        console.log(this.props.toChild)
+    if (this.props.toChild !== prevProps.toChild) {
+      this.setState({ countries: [...this.state.countries, this.props.toChild] })
     }
-   
-}
+  }
+
+  showRecent(countries) {
+
+    return Object.keys(countries).map(country => {
+      let c = countries[country];
+      return (
+
+        <li key={country}>
+          <CountryStat countryInfo={c} />
+        </li>
+
+      )
+    })
+  }
 
   render() {
     return (<div className="RecentList">
@@ -43,10 +55,7 @@ class RecentList extends Component {
         </Card.Body>
       </Card>
 
-
-      <CountryStat />
-
-      <CountryStat />
+      {this.showRecent(this.state.countries)}
 
     </div>);
 
