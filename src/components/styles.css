@@ -9,13 +9,15 @@ header h1{
 
 }
 
-#clearBtn{
+#clearBtn, #saveBtn{
   margin:auto;
-  display:block;
+  margin: 10px;
+  display:inline-block;
 }
 
 #btnWrapper{
   padding: 40px 0 40px 0;
+  text-align: center;
 }
 
 .dataNum {

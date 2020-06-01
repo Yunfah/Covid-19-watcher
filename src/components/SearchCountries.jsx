@@ -70,8 +70,8 @@ class SearchCountries extends Component {
             <Form.Group controlId="rating">
               <h4 className="white-h">Search country</h4>
 
-              <Form.Control as="select" onChange={this.onRegionChange.bind(this)}>
-                <option disabled selected={true} value="default">Select option</option>
+              <Form.Control as="select" defaultValue={'default'} onChange={this.onRegionChange.bind(this)}>
+                <option value="default" disabled>Select option</option>
                 {this.renderRegions(items.data.regions)}
               </Form.Control>
 

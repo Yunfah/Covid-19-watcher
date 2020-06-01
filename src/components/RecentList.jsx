@@ -35,10 +35,21 @@ class RecentList extends Component {
   }
 
   triggerDelete(countries){
+
    if(window.confirm("Are you sure you want to clear list?")){
       this.setState({countries: [] })
    }
 }
+
+saveLocalstorage(countries){
+console.log("Save list");
+
+let arrayCountries = (this.state.countries)
+
+console.log(arrayCountries);
+  localStorage.setItem("countries", arrayCountries);
+}
+
 
   render() {
     return (<div className="RecentList">
@@ -64,9 +75,13 @@ class RecentList extends Component {
       {this.showRecent(this.state.countries)}
 
 <div id="btnWrapper">
+  <Button id="saveBtn" variant="btn btn-light" onClick={(e)=>{
+      this.saveLocalstorage();}}>
+  Save
+  </Button>
+
   <Button id="clearBtn" variant="outline-light" onClick={(e)=>{
-      this.triggerDelete();
-   }}>
+      this.triggerDelete();}}>
 Clear list
 </Button>
 </div>
