@@ -22,7 +22,7 @@ class RecentList extends Component {
 
   showRecent(countries) {
 
-    return Object.keys(countries).map(country => {
+    return Object.keys(countries).reverse().map(country => {
       let c = countries[country];
       return (
 
