@@ -1,3 +1,16 @@
+#Motivation for using React, compared to Angular and Vue.js
+
+React is a JavaScript library, open sourced by Facebook in 2013, which is great for building modern single-page applications of any size and scale.
+The main reason why we chose React as our framework for this project, is because it's the most widely used framework, compared to AngularJs and Vue.js. It is easy to learn, thanks to its simple design, use of JSX (an HTML-like syntax) for templating, as well as its highly detailed documentation. 
+Furthermore, React brings the power and simplicity of Bootstrap to React. It includes an abundance of prebuilt, pure React components with no third-party libraries. In general, React Bootstrap offers most of the same functionalities as Bootstrap, which also affected our decision to choose React, mainly because we wanted to minimize the learning curve for this project due to time pressure.
+
+Angular, as the second largest framework in terms of usage, is a bit harder to learn do to its variety of different structures(Injectables, Components, Pipes, Modules etc.) in comparison to React and Vue.js, which have an only “Components” in mind. Aditionally, although Angular can be used with bootstrap, it is easier to use MaterialUI with Angular, which would have required us to set time aside to learn MaterialUI as well. 
+
+The reason why we didn't choose Vue, is mainly the lack of resources in comparison to React. Vue.js still has a pretty small market share in comparison with React or Angular, which means that knowledge sharing in this framework is still in the beginning phase.
+
+
+
+
 ## Covid-19 watcher 
 A project with React to track the developments of Covid-19
 
