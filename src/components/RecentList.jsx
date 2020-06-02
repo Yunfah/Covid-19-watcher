@@ -14,11 +14,15 @@ class RecentList extends Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     let getCountries = JSON.parse(localStorage.getItem("SavedCountries"));
-    this.setState({ countries: [] });
-    console.log(getCountries);
+    if (getCountries !== null ) {
+      this.setState({ countries: getCountries });
+      console.log(getCountries);
+    }
   }
+    
+   
 
 
   componentDidUpdate(prevProps) {
@@ -40,23 +44,23 @@ class RecentList extends Component {
     })
   }
 
-  triggerDelete(countries){
-   if(window.confirm("Are you sure you want to clear list?")){
-      this.setState({countries: [] })
+  triggerDelete(countries) {
+    if (window.confirm("Are you sure you want to clear list?")) {
+      this.setState({ countries: [] })
       localStorage.clear("SavedCountries");
-   }
-}
+    }
+  }
 
-saveLocalstorage(){
-console.log("Save list");
-var arrayCountries = JSON.stringify(this.state.countries)
-console.log(arrayCountries);
-localStorage.setItem("SavedCountries", arrayCountries);
+  saveLocalstorage() {
+    console.log("Save list");
+    var arrayCountries = JSON.stringify(this.state.countries)
+    console.log(arrayCountries);
+    localStorage.setItem("SavedCountries", arrayCountries);
 
-}
+  }
 
 
-  render(){
+  render() {
     return (<div className="RecentList">
       <h3 className="white-h">Recently searched</h3>
       <Card id="card-text-h">
@@ -79,20 +83,22 @@ localStorage.setItem("SavedCountries", arrayCountries);
       </Card>
       {this.showRecent(this.state.countries)}
 
-<div id="btnWrapper">
-  <Button id="saveBtn" variant="btn btn-light" onClick={(e)=>{
-      this.saveLocalstorage();}}>
-  Save
+      <div id="btnWrapper">
+        <Button id="saveBtn" variant="btn btn-light" onClick={(e) => {
+          this.saveLocalstorage();
+        }}>
+          Save
   </Button>
 
-  <Button id="clearBtn" variant="outline-light" onClick={(e)=>{
-      this.triggerDelete();}}>
-Clear list
+        <Button id="clearBtn" variant="outline-light" onClick={(e) => {
+          this.triggerDelete();
+        }}>
+          Clear list
 </Button>
-</div>
+      </div>
 
     </div>
-  );
+    );
 
   }
 
