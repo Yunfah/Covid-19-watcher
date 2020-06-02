@@ -1,4 +1,4 @@
-##Motivation for using React, compared to Angular and Vue.js
+## Motivation for using React, compared to Angular and Vue.js
 
 React is a JavaScript library, open sourced by Facebook in 2013, which is great for building modern single-page applications of any size and scale.
 The main reason why we chose React as our framework for this project, is because it's the most widely used framework, compared to AngularJs and Vue.js. It is easy to learn, thanks to its simple design, use of JSX (an HTML-like syntax) for templating, as well as its highly detailed documentation. 
