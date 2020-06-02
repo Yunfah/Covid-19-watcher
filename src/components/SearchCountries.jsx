@@ -21,13 +21,9 @@ class SearchCountries extends Component {
           this.setState({
             isLoaded: true,
             items: json,
-
           });
-
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
+
         (error) => {
           this.setState({
             isLoaded: true,
@@ -40,7 +36,6 @@ class SearchCountries extends Component {
   renderRegions(regions) {
     return Object.keys(regions).map(region => {
       let r = regions[region];
-      //console.log(r);
       return (
         <option key={region} value={region}>{r.name} </option>
       )
@@ -54,10 +49,7 @@ class SearchCountries extends Component {
     console.log(regions[region]);
     this.props.countryFromChild(regions[region]);
     this.setState({currentRegion: region});
-
   }
-
-
 
   render() {
     var { isLoaded, items } = this.state;
@@ -74,14 +66,12 @@ class SearchCountries extends Component {
                 <option value="default" disabled>Select option</option>
                 {this.renderRegions(items.data.regions)}
               </Form.Control>
-
             </Form.Group>
           </Form>
         </div>
       );
     }
   }
-
 }
 
 export default SearchCountries;

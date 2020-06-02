@@ -13,12 +13,10 @@ class App extends Component {
     country: [
       {name: " ", total_cases: " ", active_cases: " ",deaths: " "},
     ]
-
   };
-  // gör så att country är i en array
+
   parentFunction = (country) => {
     const countryInfo = {name: country.name, total_cases: country.total_cases, active_cases: country.active_cases, deaths: country.deaths}
-
     this.setState({country: countryInfo});
   }
 
@@ -33,7 +31,6 @@ class App extends Component {
         <Col lg={{span: 6, order: 1}} xs={{ span: 12, order: 2 }}>
           <RecentList toChild = {this.state.country}/>
         </Col>
-
         <Col lg={{span: 4, order: 2, offset: 2}} xs={{ span: 12, order: 1 }}>
           <TotalWorldwide/>
           <SearchCountries countryFromChild={this.parentFunction} />
@@ -42,7 +39,6 @@ class App extends Component {
     </Container>
   </div>);
  }
-
 }
 
 

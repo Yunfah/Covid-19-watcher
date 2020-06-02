@@ -7,7 +7,6 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-
 class TotalWorldwide extends Component {
 
     constructor(props) {
@@ -27,13 +26,8 @@ class TotalWorldwide extends Component {
               this.setState({
                 isLoaded: true,
                 items: json,
-
               });
-
             },
-            // Note: it's important to handle errors here
-            // instead of a catch() block so that we don't swallow
-            // exceptions from actual bugs in components.
             (error) => {
               this.setState({
                 isLoaded: true,
@@ -43,11 +37,7 @@ class TotalWorldwide extends Component {
           )
       }
 
-
-
-
     render() {
-
         var { isLoaded, items} = this.state;
 
         if (!isLoaded) {
@@ -56,8 +46,6 @@ class TotalWorldwide extends Component {
         else {
             return (
               <div className="TotalWorldwide">
-
-
                   <h3 className="white-h">Worldwide</h3>
                     <Card>
                       <Card.Body>
@@ -71,7 +59,6 @@ class TotalWorldwide extends Component {
                           <Col>
                             <span className="dataNum"><CountUp duration={1} separator=" " end={items.data.summary.active_cases} /></span>
                       <p>Active cases</p>
-
                           </Col>
                           <Col>
                             <span className="dataNum"><CountUp duration={1} separator=" " end={items.data.summary.recovered} /></span>
@@ -85,17 +72,9 @@ class TotalWorldwide extends Component {
                       </Card.Footer>
                     </Card>
                 </div>
-
-
             );
         }
-
     }
-
 }
-
-
-
-
 
 export default TotalWorldwide;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './styles.css';
 import CountryStat from './CountryStat';
 import Card from 'react-bootstrap/Card';
@@ -10,43 +10,41 @@ class RecentList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countries: [],
+      countries: []
     }
   }
 
   componentDidMount() {
     let getCountries = JSON.parse(localStorage.getItem("SavedCountries"));
-    if (getCountries !== null ) {
-      this.setState({ countries: getCountries });
+    if (getCountries !== null) {
+      this.setState({countries: getCountries});
       console.log(getCountries);
     }
   }
-    
-   
-
 
   componentDidUpdate(prevProps) {
     if (this.props.toChild !== prevProps.toChild) {
-      this.setState({ countries: [...this.state.countries, this.props.toChild] })
+      this.setState({
+        countries: [
+          ...this.state.countries,
+          this.props.toChild
+        ]
+      })
     }
   }
 
   showRecent(countries) {
     return Object.keys(countries).reverse().map(country => {
       let c = countries[country];
-      return (
-
-        <li key={country}>
-          <CountryStat countryInfo={c} />
-        </li>
-
-      )
+      return (<li key={country}>
+        <CountryStat countryInfo={c}/>
+      </li>)
     })
   }
 
   triggerDelete(countries) {
     if (window.confirm("Are you sure you want to clear list?")) {
-      this.setState({ countries: [] })
+      this.setState({countries: []})
       localStorage.clear("SavedCountries");
     }
   }
@@ -58,7 +56,6 @@ class RecentList extends Component {
     localStorage.setItem("SavedCountries", arrayCountries);
 
   }
-
 
   render() {
     return (<div className="RecentList">
@@ -82,27 +79,20 @@ class RecentList extends Component {
         </Card.Body>
       </Card>
       {this.showRecent(this.state.countries)}
-
       <div id="btnWrapper">
         <Button id="saveBtn" variant="btn btn-light" onClick={(e) => {
-          this.saveLocalstorage();
-        }}>
+            this.saveLocalstorage();
+          }}>
           Save
-  </Button>
-
+        </Button>
         <Button id="clearBtn" variant="outline-light" onClick={(e) => {
-          this.triggerDelete();
-        }}>
+            this.triggerDelete();
+          }}>
           Clear list
-</Button>
+        </Button>
       </div>
-
-    </div>
-    );
-
+    </div>);
   }
-
-
 }
 
 export default RecentList;
